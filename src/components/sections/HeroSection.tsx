@@ -24,7 +24,7 @@ export const HeroSection = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-mono text-sm">
-              👋 Welcome to my portfolio
+              👋 Namaste! Welcome to my world
             </span>
           </motion.div>
 
@@ -36,11 +36,24 @@ export const HeroSection = () => {
               delay={0.3}
             />
             <AnimatedLetters
-              text="Creative Developer"
+              text="Darshan Prajapat"
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-gradient justify-center mt-2"
               delay={0.5}
             />
           </div>
+
+          {/* Role Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+            className="mb-6"
+          >
+            <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card shadow-card text-lg font-semibold">
+              <span className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+              WordPress Developer & Designer
+            </span>
+          </motion.div>
 
           {/* Subtitle */}
           <motion.p
@@ -49,8 +62,8 @@ export const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            I craft beautiful digital experiences with clean code and innovative design.
-            Turning ideas into reality, one pixel at a time.
+            I craft stunning WordPress websites that convert visitors into customers.
+            Custom themes, plugins, WooCommerce, and everything WordPress.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -70,7 +83,7 @@ export const HeroSection = () => {
               className="px-8 py-4 border-2 border-foreground/20 rounded-full font-semibold hover:border-primary"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Get In Touch
+              Hire Me
             </MagneticButton>
           </motion.div>
 

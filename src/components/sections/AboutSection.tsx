@@ -1,35 +1,35 @@
 import { motion } from "framer-motion";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "../ScrollReveal";
 import { AnimatedCounter } from "../AnimatedCounter";
-import { Code2, Palette, Lightbulb, Rocket } from "lucide-react";
+import { Globe, Palette, Zap, ShoppingCart } from "lucide-react";
 
 const stats = [
-  { value: 5, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "+", label: "Projects Completed" },
-  { value: 50, suffix: "+", label: "Happy Clients" },
-  { value: 10, suffix: "k+", label: "Lines of Code" },
+  { value: 6, suffix: "+", label: "Years Experience" },
+  { value: 200, suffix: "+", label: "WordPress Sites" },
+  { value: 80, suffix: "+", label: "Happy Clients" },
+  { value: 50, suffix: "+", label: "Custom Plugins" },
 ];
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable code that stands the test of time",
+    icon: Globe,
+    title: "Custom Themes",
+    description: "Pixel-perfect custom WordPress themes tailored to your brand",
   },
   {
     icon: Palette,
-    title: "Design Focused",
-    description: "Creating visually stunning interfaces that users love",
+    title: "Page Builders",
+    description: "Expert in Elementor, Divi, WPBakery & Gutenberg",
   },
   {
-    icon: Lightbulb,
-    title: "Problem Solver",
-    description: "Finding creative solutions to complex technical challenges",
+    icon: ShoppingCart,
+    title: "WooCommerce",
+    description: "Complete e-commerce solutions with payment gateways",
   },
   {
-    icon: Rocket,
+    icon: Zap,
     title: "Performance",
-    description: "Optimizing for speed and exceptional user experience",
+    description: "Speed optimization & SEO for top rankings",
   },
 ];
 
@@ -44,8 +44,8 @@ export const AboutSection = () => {
           <div className="text-center mb-16">
             <span className="text-primary font-mono text-sm tracking-wider">ABOUT ME</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">
-              Passionate About Creating
-              <span className="text-gradient block">Digital Excellence</span>
+              WordPress Expert from
+              <span className="text-gradient block">India 🇮🇳</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -59,7 +59,7 @@ export const AboutSection = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Animated background pattern */}
+                {/* Animated WordPress icons */}
                 <div className="absolute inset-0 opacity-30">
                   {[...Array(20)].map((_, i) => (
                     <motion.div
@@ -85,11 +85,12 @@ export const AboutSection = () => {
                 {/* Profile placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.div
-                    className="w-3/4 h-3/4 rounded-2xl bg-card shadow-elevated flex items-center justify-center"
+                    className="w-3/4 h-3/4 rounded-2xl bg-card shadow-elevated flex items-center justify-center flex-col gap-4"
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <span className="text-8xl">👨‍💻</span>
+                    <span className="text-2xl font-bold text-gradient">Darshan</span>
                   </motion.div>
                 </div>
               </motion.div>
@@ -103,9 +104,9 @@ export const AboutSection = () => {
                 transition={{ delay: 0.5 }}
               >
                 <div className="text-3xl font-bold text-gradient">
-                  <AnimatedCounter value={5} suffix="+" />
+                  <AnimatedCounter value={6} suffix="+" />
                 </div>
-                <p className="text-sm text-muted-foreground">Years of Experience</p>
+                <p className="text-sm text-muted-foreground">Years WordPress</p>
               </motion.div>
             </div>
           </ScrollReveal>
@@ -114,16 +115,17 @@ export const AboutSection = () => {
           <div className="space-y-8">
             <ScrollReveal direction="right">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with a keen eye for design and a love for 
-                creating exceptional digital experiences. With expertise in modern web technologies, 
-                I bring ideas to life through clean code and innovative solutions.
+                Hi! I'm <span className="text-foreground font-semibold">Darshan Prajapat</span>, a passionate WordPress developer 
+                based in India. I specialize in creating beautiful, fast, and conversion-optimized 
+                WordPress websites for businesses worldwide.
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.1}>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My journey in tech started with curiosity and has evolved into a commitment to 
-                continuous learning and pushing the boundaries of what's possible on the web.
+                From custom theme development to complex WooCommerce stores, I bring your vision 
+                to life. My expertise includes Elementor, custom plugins, API integrations, 
+                and performance optimization.
               </p>
             </ScrollReveal>
 
