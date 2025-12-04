@@ -4,44 +4,44 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform with real-time inventory, payment processing, and admin dashboard.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "E-Commerce Store",
+    description: "Complete WooCommerce store with custom theme, payment gateways, and inventory management for 10,000+ products.",
+    tags: ["WooCommerce", "Custom Theme", "Razorpay", "ACF"],
     color: "from-orange-500 to-red-500",
     featured: true,
   },
   {
-    title: "AI Dashboard",
-    description: "Analytics dashboard powered by machine learning for predictive insights and data visualization.",
-    tags: ["Python", "TensorFlow", "React", "D3.js"],
+    title: "Real Estate Portal",
+    description: "Property listing website with advanced search, map integration, and agent dashboard built on WordPress.",
+    tags: ["Elementor Pro", "Google Maps", "Custom Plugin"],
     color: "from-blue-500 to-cyan-500",
     featured: true,
   },
   {
-    title: "Social Media App",
-    description: "Real-time social platform with messaging, stories, and content sharing features.",
-    tags: ["React Native", "Firebase", "WebSocket"],
+    title: "Restaurant Website",
+    description: "Multi-location restaurant website with online ordering system and table reservations.",
+    tags: ["Divi Theme", "WooCommerce", "Booking"],
     color: "from-purple-500 to-pink-500",
     featured: false,
   },
   {
-    title: "Crypto Tracker",
-    description: "Cryptocurrency portfolio tracker with live prices, charts, and price alerts.",
-    tags: ["Next.js", "WebSocket", "Chart.js"],
+    title: "Corporate Website",
+    description: "Professional corporate website with multi-language support and custom animations.",
+    tags: ["Gutenberg", "WPML", "Custom Blocks"],
     color: "from-green-500 to-emerald-500",
     featured: false,
   },
   {
-    title: "Task Management",
-    description: "Collaborative project management tool with kanban boards and team features.",
-    tags: ["Vue.js", "Express", "MongoDB"],
+    title: "Membership Portal",
+    description: "Subscription-based learning platform with course management and payment integration.",
+    tags: ["LearnDash", "Stripe", "BuddyPress"],
     color: "from-yellow-500 to-orange-500",
     featured: false,
   },
   {
-    title: "Weather App",
-    description: "Beautiful weather application with 7-day forecasts and location-based data.",
-    tags: ["React", "OpenWeather API", "Tailwind"],
+    title: "Blog Magazine",
+    description: "High-traffic news magazine with optimized performance and ad management.",
+    tags: ["Custom Theme", "AMP", "AdSense"],
     color: "from-sky-500 to-blue-500",
     featured: false,
   },
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
           <div className="text-center mb-16">
             <span className="text-primary font-mono text-sm tracking-wider">PORTFOLIO</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">
-              Featured
+              WordPress
               <span className="text-gradient"> Projects</span>
             </h2>
           </div>
@@ -92,7 +92,7 @@ export const ProjectsSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    <div className="flex gap-2 mb-4">
+                    <div className="flex gap-2 mb-4 flex-wrap">
                       {project.tags.slice(0, 3).map(tag => (
                         <span key={tag} className="px-3 py-1 rounded-full bg-white/20 text-sm backdrop-blur-sm">
                           {tag}
@@ -139,7 +139,7 @@ export const ProjectsSection = () => {
                 whileHover={{ y: -10 }}
               >
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.color} mb-4 flex items-center justify-center`}>
-                  <span className="text-white text-xl">📁</span>
+                  <span className="text-white text-xl">🌐</span>
                 </div>
                 
                 <h4 className="font-bold mb-2 group-hover:text-primary transition-colors">

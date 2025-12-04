@@ -3,40 +3,40 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "../ScrollReveal";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "WordPress",
     skills: [
-      { name: "React", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Framer Motion", level: 80 },
+      { name: "Theme Development", level: 95 },
+      { name: "Plugin Development", level: 90 },
+      { name: "WooCommerce", level: 92 },
+      { name: "Elementor Pro", level: 98 },
+      { name: "Gutenberg Blocks", level: 85 },
     ],
   },
   {
-    title: "Backend",
+    title: "Frontend",
     skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "GraphQL", level: 78 },
-      { name: "REST APIs", level: 92 },
+      { name: "HTML5/CSS3", level: 95 },
+      { name: "JavaScript", level: 88 },
+      { name: "PHP", level: 90 },
+      { name: "jQuery", level: 85 },
+      { name: "Tailwind CSS", level: 80 },
     ],
   },
   {
     title: "Tools & Others",
     skills: [
-      { name: "Git", level: 90 },
-      { name: "Docker", level: 75 },
-      { name: "AWS", level: 70 },
-      { name: "Figma", level: 85 },
-      { name: "CI/CD", level: 80 },
+      { name: "Git/GitHub", level: 85 },
+      { name: "cPanel/Hosting", level: 92 },
+      { name: "SEO Optimization", level: 88 },
+      { name: "Figma/XD", level: 80 },
+      { name: "Speed Optimization", level: 90 },
     ],
   },
 ];
 
 const techLogos = [
-  "React", "TypeScript", "Node.js", "Python", "PostgreSQL", 
-  "Docker", "AWS", "Git", "Tailwind", "Next.js"
+  "WordPress", "Elementor", "WooCommerce", "PHP", "MySQL", 
+  "JavaScript", "CSS3", "HTML5", "Gutenberg", "ACF"
 ];
 
 export const SkillsSection = () => {
@@ -57,7 +57,7 @@ export const SkillsSection = () => {
             <span className="text-primary font-mono text-sm tracking-wider">SKILLS</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4">
               Technologies I
-              <span className="text-gradient"> Work With</span>
+              <span className="text-gradient"> Master</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -125,7 +125,7 @@ export const SkillsSection = () => {
 
         {/* Animated skill icons */}
         <StaggerContainer className="flex flex-wrap justify-center gap-4 mt-16" staggerDelay={0.05}>
-          {["⚛️", "📱", "🎨", "🚀", "💻", "🔧", "☁️", "🔒"].map((emoji, i) => (
+          {["🌐", "🎨", "🛒", "⚡", "🔧", "📱", "🔒", "🚀"].map((emoji, i) => (
             <StaggerItem key={i}>
               <motion.div
                 className="w-16 h-16 rounded-xl bg-card shadow-soft flex items-center justify-center text-2xl"
