@@ -2,19 +2,20 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,14 +36,14 @@ export const Navbar = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.a
-            href="#home"
-            className="text-2xl font-bold text-gradient"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Darshan.
-          </motion.a>
+            <Link to="/" className="text-2xl font-bold text-gradient">
+              Darshan.
+            </Link>
+          </motion.div>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8">
@@ -53,19 +54,25 @@ export const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <a
-                  href={item.href}
-                  className="relative text-foreground/80 hover:text-foreground transition-colors group"
+                <Link
+                  to={item.href}
+                  className={`relative text-foreground/80 hover:text-foreground transition-colors group ${
+                    location.pathname === item.href ? "text-foreground" : ""
+                  }`}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                </a>
+                  <span 
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                      location.pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
+                    }`} 
+                  />
+                </Link>
               </motion.li>
             ))}
             <motion.li
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.5 }}
             >
               <ThemeToggle />
             </motion.li>
@@ -95,13 +102,15 @@ export const Navbar = () => {
           <ul className="py-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="block text-foreground/80 hover:text-foreground transition-colors"
+                <Link
+                  to={item.href}
+                  className={`block text-foreground/80 hover:text-foreground transition-colors ${
+                    location.pathname === item.href ? "text-primary font-semibold" : ""
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
