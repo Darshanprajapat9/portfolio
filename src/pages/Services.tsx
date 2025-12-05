@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { Check, Zap, Crown, Rocket } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
@@ -185,6 +186,9 @@ const Services = () => {
           </StaggerContainer>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection className="bg-muted/30" />
 
       {/* CTA Section */}
       <section className="py-20 px-6">
