@@ -4,9 +4,9 @@ import { AnimatedCounter } from "../AnimatedCounter";
 import { Globe, Palette, Zap, ShoppingCart } from "lucide-react";
 
 const stats = [
-  { value: 6, suffix: "+", label: "Years Experience" },
-  { value: 200, suffix: "+", label: "WordPress Sites" },
-  { value: 80, suffix: "+", label: "Happy Clients" },
+  { value: 2.5, suffix: "+", label: "Years Experience" },
+  { value: 50, suffix: "+", label: "WordPress Sites" },
+  { value: 10, suffix: "+", label: "Happy Clients" },
   { value: 50, suffix: "+", label: "Custom Plugins" },
 ];
 
