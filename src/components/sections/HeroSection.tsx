@@ -62,8 +62,8 @@ export const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            I craft stunning WordPress websites that convert visitors into customers.
-            Custom themes, plugins, WooCommerce, and everything WordPress.
+            I build modern and user-friendly WordPress websites.
+            Custom themes, plugins, WooCommerce, and everything WordPress
           </motion.p>
 
           {/* CTA Buttons */}
